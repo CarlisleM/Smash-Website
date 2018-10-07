@@ -1,0 +1,230 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif 
+	color: black;
+	margin: 0 -9999rem;
+	background: linear-gradient(#eee, #ccc);	
+}
+
+h3 {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	margin: 10
+}
+
+#wrapper {
+	min-height:100%;
+	position: relative;
+}
+
+#header {
+}
+
+#content {
+	padding-bottom: 5%;   /* Height of the footer element */
+}
+
+#footer {
+	width: 100%;
+	height: 4%;
+	position: absolute;
+	margin-top: 10px;
+	bottom: 0;
+	left: 0;
+	background: #333333;
+}
+
+p {
+	margin: 10;
+	padding: 0;
+	line-height: 200%;
+}
+
+table, th, td {
+    border: 1px solid black; 
+	margin: 10;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	background-color: #333333;
+	text-align: center;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: white; 
+}
+
+#rectangle {
+	width: 5%;
+	height: 57%;
+	background: red;
+	position: relative;
+	left: 2%;
+	float: left;
+	border: 2px solid black;
+	margin-right: 5%;
+}
+
+.textalign {
+	margin: 10;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 4%;	
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+	width: 95%;
+}
+
+/* For mobile: */
+@media only screen and (min-width: 300px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+	body {
+        background-color: pink;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+	body {
+        background-color: green;
+    }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+	 body {
+        background-color: #E6E6FA;
+    }
+
+/* fix positioning on label/checkbox so it doesnt push images down */
+/* Category options */
+input {
+  position: relative;
+  left: 2.5%;
+  top: 150px;
+  z-index: 1103;
+}
+
+label {
+  position: relative;
+  left: 2.5%;
+  top: 150px;
+  z-index: 1103;
+}	
+
+input[type=radio] + label {
+  color: #black;
+  font-style: normal;
+} 
+input[type=radio]:checked + label {
+  color: white;
+  font-style: italic;
+} 
+
+input:enabled {
+    
+}
+
+input:disabled + label {
+	color: blue;
+}
+	
+/* Select what to display by default*/
+.hoodie, .teeshirt, .sale {
+    display: block;
+}
+
+#teeshirts:checked ~ div .hoodie {
+	display: none;
+}
+
+#hoodies:checked ~ div .teeshirt {
+    display: none;
+}
+													
+/* fix so removes multiple attributes */
+#sales:checked ~ .teeshirt .hoodie, .sale {
+    display: block;
+}
+
+/* remove current option from drop down */
+option:checked {
+	display: none;
+}
